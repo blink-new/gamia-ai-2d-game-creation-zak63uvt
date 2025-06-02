@@ -1,15 +1,14 @@
-import { Gamepad2 } from 'lucide-react'
+// src/components/LoadingScreen.tsx
+import React from 'react';
+import { Loader2 } from 'lucide-react';
 
-export default function LoadingScreen() {
+const LoadingScreen: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin mb-4">
-          <Gamepad2 className="h-12 w-12 text-blue-500 mx-auto" />
-        </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Gamia</h2>
-        <p className="text-gray-400">Loading your game creation platform...</p>
-      </div>
+    <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex flex-col items-center justify-center z-50">
+      <Loader2 className="w-16 h-16 text-blue-400 animate-spin mb-4" />
+      <p className="text-white text-xl">Chargement de Gamia...</p>
     </div>
-  )
-}
+  );
+};
+
+export default LoadingScreen;
